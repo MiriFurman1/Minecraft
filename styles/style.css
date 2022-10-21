@@ -80,6 +80,9 @@ height:100vh;
     border:1px dotted black;
 }
 
+.to-fill{
+
+}
 /**Menu**/
 
 #menu{
@@ -102,11 +105,18 @@ height:100vh;
     border:2px black solid;
     border-radius: 10px;
 }
+
+.tool:hover{
+    cursor: pointer;
+}
 .icon{
     width:30px;
     height:30px;
+    margin:0.3vw;
 }
-
+.icon:hover{
+    cursor: pointer;
+}
 #inventory{
     display: flex;
     flex-direction: row;
@@ -116,13 +126,40 @@ height:100vh;
     display: flex;
     flex-direction: column;
 }
-.icon{
-    margin:0.3vw;
-}
+
 #restart{
     height:50px;
     width:50px;
     background-color:green;
 }
 
+/** menu icons **/
+
+#axe{
+    background-image: url("/img/axe.png");
+    background-size: contain;
+}
+
+#pickaxe{
+    background-image: url("/img/pickaxe.png");
+    background-size: contain;
+}
+
+#shovel{
+    background-image: url("/img/shovel.png");
+    background-size: contain;
+}
+
+.wood-available{
+    background-image: url("/img/wood.png");
+    background-size: contain;
+}
+.stone-available{
+    background-image: url("/img/rock\ \(1\).png");
+    background-size: contain;
+}
+.soil-available{
+    background-image: url("/img/ground.jpg");
+    background-size: contain;
+}
 
