@@ -1,0 +1,79 @@
+/* variables */
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+img{
+    height:100%;
+    width:100%;
+}
+
+#welcome-page{
+width:100vw;
+height:100vh;
+}
+
+#welcome-page h1{
+    margin: 0;
+    
+}
+
+#game-page{
+    width:100vw;
+    height:100vh;
+    background-color:#EEF1FF;
+    display:flex;
+    flex-direction: column;
+}
+
+#game-grid{
+    width:100vw;
+    height:85vh;
+    background-color: #EEF1FF;
+    display: grid;
+    grid-template-rows: repeat(20,1fr);
+    grid-template-columns: repeat(30,1fr);
+}
+
+#menu{
+    height:15vh;
+    width:100vw;
+    background-color: #9B7777;
+}
+
+.ground{
+    background-image: url(/img/ground.jpg);
+    background-size: contain;
+    border:1px dotted black;
+}
+
+.grass{
+    background-image: url(/img/grass.png);
+    background-size: contain;
+    border:1px dotted black;
+}
+
+
+.rock{
+    background-image: url(/img/rock\ \(1\).png);
+    background-size: contain;
+    border:1px dotted black;
+}
+
+.tree-stem{
+    background-image: url(/img/tree.png);
+    background-size: contain;
+    border:1px dotted black;
+}
+
+.tree-leaf{
+    background-image: url(/img/leaf.png);
+    background-size: contain;
+    border:1px dotted black;
+}
+
