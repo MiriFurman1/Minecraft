@@ -18,16 +18,47 @@
     </div>
     <div id="game-page">
         <div id="game-grid"></div>
+
         <div id="menu">
-            <div id="tools">
-                <div id="axe"></div>
-                <div id="pickaxe"></div>
-                <div id="shovel"></div>
+
+            <div class="tools">
+                <div class="tool" id="axe">
+                    <img src="/img/axe.png" >
+                </div>
+                <div class="tool" id="pickaxe">
+                    <img src="/img/pickaxe.png">
+                </div>
+                <div class="tool" id="shovel">
+                    <img src="/img/shovel.png">
+                </div>
             </div>
-            <div id="inventory"></div>
-                <div id="restart"></div>
+
+            <div id="inventory">
+                <div class="available-materials">
+
+                <div class="icon wood-available">
+                    <img src="/img/wood.png"></div>
+
+                <div class="icon stone-available">
+                    <img src="/img/rock (1).png"></div>
+
+                <div class="icon soil-available">
+                    <img src="/img/ground.jpg"></div>
+
+            </div>
+                <div class="inventory-list">
+            <ul><br>
+                <li>Wood: 0</li><br>
+                <li>Stone: 0</li><br>
+                <li>Soil: 0</li>
+            </ul>
         </div>
     </div>
-    <script src="/script.js"></script>
+    <div id="restart"> restart</div>
+    </div>
+                
+        </div>
+    </div>
+    <script type="module" src="/script.js"></script>
 </body>
 </html>

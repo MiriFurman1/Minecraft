@@ -1,6 +1,4 @@
-/* variables */
-
-
+/** page settings **/
 
 *{
     margin:0;
@@ -11,6 +9,10 @@
 img{
     height:100%;
     width:100%;
+}
+
+ul{
+    list-style: none;
 }
 
 #welcome-page{
@@ -46,6 +48,7 @@ height:100vh;
     background-color: #9B7777;
 }
 
+/** elements style classes **/
 .ground{
     background-image: url(/img/ground.jpg);
     background-size: contain;
@@ -76,4 +79,50 @@ height:100vh;
     background-size: contain;
     border:1px dotted black;
 }
+
+/**Menu**/
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.tools{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:50vw;
+
+}
+
+.tool{
+    height:50px;
+    width:50px;
+    border:2px black solid;
+    border-radius: 10px;
+}
+.icon{
+    width:30px;
+    height:30px;
+}
+
+#inventory{
+    display: flex;
+    flex-direction: row;
+}
+
+.available-materials{
+    display: flex;
+    flex-direction: column;
+}
+.icon{
+    margin:0.3vw;
+}
+#restart{
+    height:50px;
+    width:50px;
+    background-color:green;
+}
+
 
