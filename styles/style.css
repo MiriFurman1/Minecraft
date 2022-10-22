@@ -46,6 +46,7 @@ flex-direction: column;
 
 a{
     text-decoration: none;
+    color: black;
 }
 a:link{
     color: black;
@@ -59,6 +60,9 @@ a:link{
     font-size: 25px;
     background-color: #EEF1FF;
     border-radius: 10px;
+}
+#start-btn:hover{
+    background-color: #e4b4b4;
 }
 
 /** Second page **/
@@ -193,6 +197,7 @@ a:link{
 }
 #restart:hover{
     cursor: pointer;
+    background-color: #e4b4b4;
 }
 
 /** menu icons **/

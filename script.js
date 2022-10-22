@@ -24,6 +24,7 @@ gameFunc()
 function chooseTools(){
     tools.addEventListener("click",(e)=>{
         currentTool=e.target
+        
     })
 }
 
@@ -51,8 +52,6 @@ const manageInventory=(material,action)=>{
         Inventory.innerHTML=numOfMaterial
         materialArr[arrPlace]=numOfMaterial
     }
-
-
 }
 
 function removeElements(){
