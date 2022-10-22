@@ -1,4 +1,17 @@
 @media(max-width:500px){
+    #welcome-page{
+        background-size: 100%;
+    }
+    #welcome-page h2{
+        margin-top: 10vh;
+    
+    }
+    #start-btn{
+        margin-top: 60vh;
+        width:40vw;
+        margin-left: 32vw;
+        
+    }
     #game-grid{
         grid-template-rows: repeat(20,1fr);
         grid-template-columns: repeat(10,1fr);
@@ -6,15 +19,62 @@
     }
 
     #menu{
-        height:17vh;
+        height:15vh;
+        margin-bottom: 5vh;
+        
     }
 
+    #inventory{
+        width:30vw;
+        justify-content:left;
+    }
+    
+    .tool{
+        width:40px;
+        height:40px;
+    }
+
+    .icon{
+        width:40px;
+        height:40px;
+        margin:0vw;
+    }
+
+#restart{
+    width:15vw;
+    
+}
 }
 
 @media(max-width:850px) and (min-width:500px) {
+    #start-btn{
+        margin-top: 60vh;
+        width:30vw;
+        margin-left: 35vw;
+        
+    }
     #game-grid{
         height:60vh;
-        grid-template-columns: repeat(10,1fr);
+        grid-template-columns: repeat(15,1fr);
     }
+
+#menu{
+    margin-top: -7vh;
+}
+.icon{
+    width:50px;
+    height:50px;
+    
 }
 
+#welcome-page h2{
+    margin-top: 10vh;
+}
+
+#inventory{
+    width:30vw;
+}
+
+
+
+}

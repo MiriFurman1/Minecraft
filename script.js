@@ -1,7 +1,6 @@
 import{drawFunc} from './draw.js'
 const gameGrid=document.querySelector("#game-grid")
 let currentTool;
-
 let inventoryList=document.querySelectorAll("li")
 let icons=document.querySelector("#inventory")
 let tools=document.querySelector(".tools")
@@ -16,6 +15,8 @@ const gameFunc=()=>{
     removeElements()
     selectMaterial()
     chooseTools()
+    addMaterialToBoard()
+    restart()
 }
 
 gameFunc()
@@ -29,31 +30,26 @@ function chooseTools(){
 
 const manageInventory=(material,action)=>{
     
-    let sliceUntil;
     if(material==="wood"||material==="tree-stem"){
         arrPlace=0;
-        sliceUntil=6;
     }
     if(material==="rock"){
         arrPlace=1;
-        sliceUntil=7;
     }
     if(material==="soil"||material=="ground"){
         arrPlace=2;
-        sliceUntil=6;
     }
+
     let Inventory= inventoryList[arrPlace]
     if(action==="add"){
-        numOfMaterial=(parseInt(Inventory.innerHTML.slice(sliceUntil,))+1)
-        Inventory.innerHTML=Inventory.innerHTML.slice(0,sliceUntil)+numOfMaterial
+        numOfMaterial=parseInt(Inventory.innerHTML)+1
+        Inventory.innerHTML=numOfMaterial
         materialArr[arrPlace]=numOfMaterial
-        
     }
     if(action==="remove"){
-        numOfMaterial=(parseInt(Inventory.innerHTML.slice(sliceUntil,))-1)
-        Inventory.innerHTML=Inventory.innerHTML.slice(0,sliceUntil)+numOfMaterial
+        numOfMaterial=parseInt(Inventory.innerHTML)-1
+        Inventory.innerHTML=numOfMaterial
         materialArr[arrPlace]=numOfMaterial
-        
     }
 
 
@@ -102,30 +98,31 @@ function selectMaterial(){
     })
 }
 
+function addMaterialToBoard(){
+
 
     gameGrid.addEventListener("click",(e)=>{
         let currentLocation=e.target
-        let cellName= currentLocation.classList[0]
         
         if(currentLocation.classList.contains("to-fill")&&((currentTool=="rock")||(currentTool=="ground")||(currentTool=="tree-stem"))){
-
             if(materialArr[arrPlace]>0&&!currentLocation.classList.contains("rock")){
                 e.target.classList.add(currentTool)
                 manageInventory(currentTool,"remove")
                 let cellName= currentLocation.classList[0]
-                console.log(cellName.split("-"))
                     row=cellName.split("-")[1]
                     column=cellName.split("-")[2]
                     let newRowToFill=row-1
-                    
                     let currentCell=document.querySelector(".cell"+'-'+`${newRowToFill}`+'-'+`${column}`) 
                     currentCell.classList.add("to-fill")
-                
             }
-
         }
     })
+}
 
-
-    
+function restart(){
+    const restartBtn=document.querySelector("#restart")
+    restartBtn.addEventListener("click",(e)=>{
+        window.location='/'
+    })
+}
 

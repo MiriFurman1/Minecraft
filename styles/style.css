@@ -1,9 +1,11 @@
 /** page settings **/
-
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
+    overflow: hidden;
+    font-family: Courgette;
 }
 
 img{
@@ -14,21 +16,57 @@ img{
 ul{
     list-style: none;
 }
-
+/** First page **/
 #welcome-page{
 width:100vw;
 height:100vh;
+background-image: url(/img/minecraft-unsplash.jpg);
+background-color: rgb(82,149,254);
+background-position: center;
+background-size: 50%;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: column;
+
 }
 
 #welcome-page h1{
     margin: 0;
-    
+    text-align: center;
+    font-size: 70px;
+    color:#851520;
+    margin-bottom: 3vh;
 }
+#welcome-page h2{
+    margin-top: 70vh;
+    text-align: center;
+    font-size: 50px;
+    color:#ffffff;
+}
+
+a{
+    text-decoration: none;
+}
+a:link{
+    color: black;
+}
+
+#start-btn{
+    text-align: center;
+    width:10vw;
+    padding: 10px;
+    margin-left: 45vw;
+    font-size: 25px;
+    background-color: #EEF1FF;
+    border-radius: 10px;
+}
+
+/** Second page **/
 
 #game-page{
     width:100vw;
     height:100vh;
-    background-color:#EEF1FF;
+    background-color: #9B7777;
     display:flex;
     flex-direction: column;
 }
@@ -36,7 +74,6 @@ height:100vh;
 #game-grid{
     width:100vw;
     height:85vh;
-    background-color: #EEF1FF;
     display: grid;
     grid-template-rows: repeat(20,1fr);
     grid-template-columns: repeat(30,1fr);
@@ -79,6 +116,10 @@ height:100vh;
     background-size: contain;
     border:1px dotted black;
 }
+.cloud{
+    background-image: url(/img/cloud.png);
+    background-size: contain;
+}
 
 .to-fill{
 
@@ -110,8 +151,8 @@ height:100vh;
     cursor: pointer;
 }
 .icon{
-    width:30px;
-    height:30px;
+    width:50px;
+    height:50px;
     margin:0.3vw;
 }
 .icon:hover{
@@ -119,18 +160,39 @@ height:100vh;
 }
 #inventory{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width:15vw;
+    margin-top: 5vh;
 }
 
 .available-materials{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
+.inventory-list ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.inventory-list li{
+  margin-right: 0.5vw;
+  padding: 20px;
+}
 #restart{
     height:50px;
-    width:50px;
-    background-color:green;
+    width:10vw;
+    background-color:#EEF1FF;
+    padding-top: 15px;
+    border: 1px dotted black;
+    border-radius: 10px;
+    opacity: 0.7;
+    text-align: center;
+}
+#restart:hover{
+    cursor: pointer;
 }
 
 /** menu icons **/
